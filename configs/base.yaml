@@ -1,0 +1,102 @@
+# lightning.pytorch==2.0.7
+seed_everything: 1019
+trainer:
+  accelerator: auto
+  strategy: auto
+  devices: 4
+  num_nodes: 1
+  precision: 16
+  logger: logger.yaml
+  callbacks: null
+  fast_dev_run: false
+  max_epochs: 30
+  min_epochs: null
+  max_steps: -1
+  min_steps: null
+  max_time: null
+  limit_train_batches: null
+  limit_val_batches: 10
+  limit_test_batches: null
+  limit_predict_batches: null
+  overfit_batches: 0.0
+  val_check_interval: 1.0
+  check_val_every_n_epoch: 1
+  num_sanity_val_steps: null
+  log_every_n_steps: 10
+  enable_checkpointing: null
+  enable_progress_bar: null
+  enable_model_summary: null
+  accumulate_grad_batches: 1
+  gradient_clip_val: 0.1
+  gradient_clip_algorithm: norm
+  deterministic: true
+  benchmark: null
+  inference_mode: true
+  use_distributed_sampler: true
+  profiler: null
+  detect_anomaly: false
+  barebones: false
+  plugins: null
+  sync_batchnorm: false
+  reload_dataloaders_every_n_epochs: 0
+  default_root_dir: "./logs/"
+early_stop:
+  monitor: "valid/FFPP/auc"
+  min_delta: 0.0
+  patience: 10
+  verbose: false
+  mode: max
+  strict: true
+  check_finite: true
+  stopping_threshold: null
+  divergence_threshold: null
+  check_on_train_epoch_end: null
+  log_rank_zero_only: false
+checkpoint:
+  dirpath: null
+  filename: null
+  monitor: "valid/FFPP/auc"
+  verbose: false
+  save_last: true
+  save_top_k: 1
+  save_weights_only: false
+  mode: max
+  auto_insert_metric_name: true
+  every_n_train_steps: null
+  train_time_interval: null
+  every_n_epochs: null
+  save_on_train_epoch_end: null
+lr_monitor:
+  logging_interval: epoch
+  log_momentum: false
+progress_bar:
+  refresh_rate: 1
+  leave: false
+  theme:
+    description: '#8250E5'
+    progress_bar: '#7FFF00'
+    progress_bar_finished: '#7FFF00'
+    progress_bar_pulse: '#7FFF00'
+    batch_progress: '#5398FE'
+    time: grey54
+    processing_speed: grey70
+    metrics: white
+  console_kwargs: null
+optimizer:
+  lr: 0.0001
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 0.001
+  amsgrad: false
+  maximize: false
+  foreach: null
+  differentiable: false
+lr_scheduler:
+  start_factor: 1.0
+  end_factor: 1.0
+  total_iters: 1
+  last_epoch: -1
+  verbose: false
+data: data.yaml

@@ -1,0 +1,6 @@
+model:
+  class_path: src.model.clip.linear.LinearVideoLearner
+  init_args:
+    architecture: ViT-L/14
+trainer:
+  accumulate_grad_batches: 1

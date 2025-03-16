@@ -1,0 +1,1 @@
+We borrow two modules from [DeeperForensics](https://github.com/EndlessSora/DeeperForensics-1.0/tree/master/perturbation) to apply all perturbations on the video dataset, please refer to the repo for more detail about the distortions and their configurations.

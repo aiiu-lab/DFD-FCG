@@ -1,0 +1,14 @@
+data:
+  class_path: src.dataset.base.ODDeepFakeDataModule
+  init_args:
+    test_datamodules:
+    - class_path: src.dataset.ffpp.FFPPDataModule
+      init_args:
+        df_types: ['REAL','DF']
+        compressions: ['c23']
+        strategy: NORMAL
+        augmentations: 
+        - NONE
+        force_random_speed: null
+        data_dir: 'datasets/ffpp/'
+        vid_ext: .avi

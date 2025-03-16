@@ -1,0 +1,39 @@
+data:
+  class_path: src.dataset.base.ODDeepFakeDataModule
+  init_args:
+    test_datamodules:
+    # - class_path: src.dataset.ffpp.FFPPDataModule
+    #   init_args:
+    #     df_types: ['REAL','DF','FS','F2F','NT']
+    #     compressions: ['c23']
+    #     strategy: NORMAL
+    #     augmentations: 
+    #     - NONE
+    #     force_random_speed: null
+    #     data_dir: 'datasets/ffpp/'
+    #     vid_ext: .avi
+    - class_path: src.dataset.cdf.CDFDataModule
+      init_args:
+        data_dir: 'datasets/cdf/'
+        vid_ext: .avi
+    - class_path: src.dataset.dfdc.DFDCDataModule
+      init_args:
+        data_dir: 'datasets/dfdc/'
+        vid_ext: .avi
+    - class_path: src.dataset.fsh.FShDataModule
+      init_args:
+        data_dir: 'datasets/ffpp/'
+        compressions: ['c23']
+        vid_ext: .avi
+    - class_path: src.dataset.dfo.DFoDataModule
+      init_args:
+        data_dir: 'datasets/dfo/'
+        vid_ext: .avi
+    # - class_path: src.dataset.wdf.WDFDataModule
+    #   init_args:
+    #     data_dir: 'datasets/wdf/'
+    #     vid_ext: .avi
+    # - class_path: src.dataset.heygen.HeyGenDataModule
+    #   init_args:
+    #     data_dir: 'datasets/heygen/'
+    #     vid_ext: .avi

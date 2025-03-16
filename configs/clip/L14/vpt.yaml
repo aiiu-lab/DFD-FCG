@@ -1,0 +1,7 @@
+model:
+  class_path: src.model.clip.vpt.PromptedLinearVideoLearner
+  init_args:
+    architecture: ViT-L/14
+    num_prompts: 1
+trainer:
+  accumulate_grad_batches: 1

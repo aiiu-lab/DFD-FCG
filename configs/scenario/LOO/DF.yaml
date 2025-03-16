@@ -1,0 +1,32 @@
+data:
+  class_path: src.dataset.base.ODDeepFakeDataModule
+  init_args:
+    train_datamodules:
+    - class_path: src.dataset.ffpp.FFPPDataModule
+      init_args:
+        batch_size: 30
+        df_types: ['REAL','FS','F2F','NT']
+        compressions: ['c23']
+        strategy: FORCE_PAIR
+        augmentations:
+        - NORMAL
+        - VIDEO
+        - VIDEO_RRC
+        - FRAME
+        force_random_speed: null
+        data_dir: 'datasets/ffpp/'
+        vid_ext: '.avi'
+        pack: false
+        max_clips: 3
+    val_datamodules:
+    - class_path: src.dataset.ffpp.FFPPDataModule
+      init_args:
+        df_types: ['REAL','NT','FS','F2F']
+        compressions: ['c23']
+        strategy: NORMAL
+        augmentations: 
+        - NONE
+        data_dir: 'datasets/ffpp/'
+        vid_ext: '.avi'
+        pack: false
+        max_clips: 1

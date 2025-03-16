@@ -1,0 +1,14 @@
+trainer:
+  logger:
+    init_args:
+      offline: true
+  limit_train_batches: 30
+  limit_val_batches: 30
+  accumulate_grad_batches: 1
+data:
+  init_args:
+    batch_size: 1
+    num_workers: 0
+    train_datamodules:
+      - init_args:
+          batch_size: 1

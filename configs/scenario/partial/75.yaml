@@ -1,0 +1,56 @@
+data:
+  class_path: src.dataset.base.ODDeepFakeDataModule
+  init_args:
+    batch_size: 20
+    num_workers: 4
+    clip_duration: 3
+    num_frames: 10
+    train_datamodules:
+    - class_path: src.dataset.ffpp.FFPPDataModule
+      init_args:
+        batch_size: 30
+        df_types: ['REAL','DF','FS','F2F','NT']
+        compressions: ['c23']
+        strategy: FORCE_PAIR
+        augmentations:
+        - NORMAL
+        - VIDEO
+        - VIDEO_RRC
+        - FRAME
+        force_random_speed: null
+        data_dir: 'datasets/ffpp/'
+        vid_ext: '.avi'
+        pack: false
+        ratio: 0.75
+        max_clips: 3
+    val_datamodules:
+    - class_path: src.dataset.ffpp.FFPPDataModule
+      init_args:
+        df_types: ['REAL','DF','FS','F2F','NT']
+        compressions: ['c23']
+        strategy: NORMAL
+        augmentations: 
+        - NONE
+        data_dir: 'datasets/ffpp/'
+        vid_ext: '.avi'
+        pack: false
+        max_clips: 1
+    - class_path: src.dataset.cdf.CDFDataModule
+      init_args:
+        data_dir: 'datasets/cdf/'
+        vid_ext: '.avi'
+        pack: false
+        max_clips: 1
+    - class_path: src.dataset.dfdc.DFDCDataModule
+      init_args:
+        data_dir: 'datasets/dfdc/'
+        vid_ext: '.avi'
+        pack: false
+        max_clips: 1
+    - class_path: src.dataset.fsh.FShDataModule
+      init_args:
+        compressions: ['c23']
+        data_dir: 'datasets/ffpp/'
+        vid_ext: '.avi'
+        pack: false
+        max_clips: 1

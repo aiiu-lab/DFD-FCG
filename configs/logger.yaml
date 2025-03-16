@@ -1,0 +1,14 @@
+class_path: lightning.pytorch.loggers.WandbLogger
+init_args:
+  name: null
+  save_dir: './logs/'
+  version: null
+  offline: false
+  dir: null
+  id: null
+  anonymous: null
+  project: 'DFD-FCG'
+  log_model: false
+  prefix: ''
+  checkpoint_name: null
+  entity: ""
