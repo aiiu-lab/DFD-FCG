@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">[CVPR'25] Towards More General Video-based Deepfake Detection through Facial Feature Guided Adaptation for Foundation Model (DFD-FCG)</h1>
+  <h1 align="center">[CVPR'25] Towards More General Video-based Deepfake Detection through Facial Component Guided Adaptation for Foundation Model (DFD-FCG)</h1>
 
   <p align="center">
     <a href="https://github.com/ODD2"><strong>Yue-Hua Han</strong></a>
