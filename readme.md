@@ -236,4 +236,5 @@ If you find our efforts helpful, please cite our paper and leave a star for furt
 
 
 ## 📭 Contact
-If you have any comments or questions, feel free to contact us!
+The provided code and weights are only available for research purpose only. 
+If you have further questions (including commercial use), please contact [Dr. Jun-Cheng Chen](pullpull@citi.sinica.edu.tw).
