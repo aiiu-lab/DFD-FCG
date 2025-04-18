@@ -7,8 +7,6 @@ wandb/
 *.env
 datasets/
 datasets
-misc/
-misc
 .cache/
 .cache
 lightning_logs/
